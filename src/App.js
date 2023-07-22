@@ -7,33 +7,31 @@ import Payment from './pages/payment/Payment.js';
 import Cart from './pages/cart/Cart.js';
 import Language from './Language.js';
 import Login from './Login.js';
-import Main from './Main.js';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    // <Router>
-    //   <Switch>
-    //     <Route exact path="/" > <Login /></Route>
-    //     <Route exact path="/" > <Main /></Route>
-    //   </Switch>
-    // </Router>
 
     <Router>
       <div style={{ display: 'flex', maxWidth: '1280px' }} >
         <SideNav />
         <div id="main" style={{ height: '100vh', overflowY: 'auto' }}>
-          {/* <Alart /> */}
-          <Switch>
-            {/* <Route exact path="/" component={Login} /> */}
-            <Route exact path="/" component={Home} />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/order" element={<Order />} />
+            <Route path="/address" element={<Address />} />
+            <Route path="/payment" element={<Payment />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/language" element={<Language />} />
+            <Route path="/logout" element={<Login />} />
+            {/* <Route exact path="/" component={Home} />
             <Route exact path="/order" component={Order} />
             <Route exact path="/address" component={Address} />
             <Route exact path="/payment" component={Payment} />
             <Route exact path="/cart" component={Cart} />
             <Route exact path="/language" component={Language} />
-            <Route path="/logout" component={Login} />
-          </Switch>
+            <Route path="/logout" component={Login} /> */}
+          </Routes>
 
           <div style={{
             position: 'absolute', zIndex: '3', left: '20px', bottom: '30px', width: '60px', height: '60px', borderRadius: '50px', backgroundColor: '#3B49E7',
