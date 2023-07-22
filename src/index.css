@@ -1,13 +1,207 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html,
+body,
+#app,
+#app>div {
+  height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  top: 0;
+  right: 0;
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Almarai', sans-serif;
+  font-size: 12px;
+  max-width: 1280px;
+}
+
+.nav:hover {
+  background: rgba(249, 249, 255, 0.24);
+  border-radius: 6px;
+}
+
+.active {
+  background: rgba(249, 249, 255, 0.24);
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.smaller {
+  font-size: 10px;
+}
+
+.small {
+  font-size: 12px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.container {
+  box-shadow: 0px 4px 20px rgba(59, 73, 231, 0.15);
+  border-radius: 18px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+input[type=text] {
+  border: none;
+  background: rgba(59, 73, 231, 0.03);
+  border: 1px solid rgba(59, 73, 231, 0.07);
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 10px 20px;
+  width: 200px;
+  height: 42px;
+  /* height: max-content; */
+}
+
+::placeholder {
+  font-family: 'Almarai', sans-serif;
+  font-size: smaller;
+}
+
+button {
+  border: none;
+  background: #3B49E7;
+  box-shadow: 0px 4px 12px -1px rgba(0, 0, 0, 0.23);
+  border-radius: 6px;
+  padding: 0 10px;
+  color: white;
+  width: 130px;
+  font-family: 'Almarai', sans-serif;
+}
+
+
+/* ********************* table style ********************* */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 10px;
+  margin: 10px 0;
+  /* overflow: hidden; */
+  /* display: block; */
+  white-space: nowrap;
+  /* width: 1000vw; */
+  /* max-width: -moz-fit-content; */
+  /* max-width: fit-content; */
+  /* margin: 0 auto; */
+  overflow-x: scroll;
+}
+
+th,
+td {
+  padding: 15px;
+}
+
+thead {
+  background: rgba(59, 73, 231, 0.07);
+  text-align: right;
+}
+
+tr:hover {
+  background: rgba(59, 73, 231, 0.03);
+}
+
+#main {
+  width: 100vw;
+}
+
+/* ********************* drop-down ********************* */
+.drop-down-btn {
+  background-color: white;
+  border: 2px solid rgba(59, 73, 231, 0.07);
+  box-sizing: border-box;
+  box-shadow: none;
+  border-radius: 6px;
+  padding: 0 10px;
+  color: black;
+  width: 200px;
+  text-align: right;
+}
+
+select {
+  border: 2px solid rgba(59, 73, 231, 0.07);
+  box-sizing: border-box;
+  border-radius: 6px;
+  margin-top: -5px;
+  font-size: 11px;
+  font-family: 'Almarai', sans-serif;
+  background-color: white;
+  width: 200px;
+  height: 40px;
+}
+
+/* .drop-down p{
+  text-align: right;
+  padding: 10px 10px;
+  margin: 0;
+}
+.drop-down p:hover{
+  background: rgba(59, 73, 231, 0.07);
+} */
+
+
+/* ********************* option menu ********************* */
+
+.option {
+  border: 2px solid rgba(59, 73, 231, 0.07);
+  box-sizing: border-box;
+  border-radius: 0 0 6px 6px;
+  margin-top: -5px;
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  /* box-shadow: 0px 4px 12px -1px rgba(0, 0, 0, 0.23); */
+  /* border-radius: 0 0 6px 6px; */
+  width: 130px;
+  height: 72px;
+}
+
+.option p {
+  text-align: right;
+  padding: 10px 10px;
+  margin: 0;
+}
+
+.option p:hover {
+  background: rgba(59, 73, 231, 0.07);
+}
+
+/* ********************* footer ********************* */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  #logo {
+    width: 70px;
+  }
+
+  .break {
+    display: block;
+  }
+
+  #counter {
+    min-width: 90px;
+  }
+
+  #orderimg {
+    width: 300px;
+  }
+
+  #addressimg {
+    width: 200px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
 }
